@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:smart_home/features/login/component/login_cubit.dart';
 import 'package:smart_home/features/register/cubit/signup_cubit.dart';
 import 'package:smart_home/shared/cubits/app_cubit/app_cubit.dart';
 
@@ -10,6 +11,12 @@ Future<void> registerCubitModules(GetIt getIt) async {
     ..registerFactory(
       () => SignupCubit(
         authRepository: getIt(),
+      ),
+    )
+    ..registerFactory(
+      () => LoginCubit(
+        authRepository: getIt(),
+        appCubit: getIt(),
       ),
     );
     // ..registerLazySingleton(
@@ -29,12 +36,7 @@ Future<void> registerCubitModules(GetIt getIt) async {
     //     userRepository: getIt(),
     //   ),
     // )
-    // ..registerFactory(
-    //   () => LoginCubit(
-    //     authRepository: getIt(),
-    //     appCubit: getIt(),
-    //   ),
-    // )
+    
     // ..registerFactory(() => RenameNodeCubit(moduleRespository: getIt()))
     // ..registerFactory(
     //     () => GetHistoryConnectionCubit(moduleRespository: getIt()))

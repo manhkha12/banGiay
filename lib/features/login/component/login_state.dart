@@ -1,13 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:smart_home/models/app_error.dart';
 part 'login_state.freezed.dart';
 @freezed
 
 class LoginState with _$LoginState{
   factory LoginState({
+    @Default(false) bool isLoginning,
+    @Default(false) bool isLoginSuccess,
     String? email,
     String? password,
-    @Default(false) bool isLoading,
-    @Default(false) bool isLoginSuccess,
+    AppError? error,
   }) = _LoginState;
   
   LoginState._();

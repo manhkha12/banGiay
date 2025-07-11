@@ -30,6 +30,7 @@ class SignupCubit extends Cubit<SignupState> {
     try {
       emit(state.copyWith(isLoading: true));
       final params = state.toRegisterParams();
+      print("xxxxxx${params}");
       await authRepository.register(params);
       emit(state.copyWith(isLoading: false, isSignupSuccess: true));
     } catch (e) {

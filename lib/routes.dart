@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:smart_home/features/common/splash_screen.dart';
 import 'package:smart_home/features/intro/intro_screen.dart';
+import 'package:smart_home/features/login/component/login_cubit.dart';
 import 'package:smart_home/features/login/login_screen.dart';
 import 'package:smart_home/features/main_screen.dart';
 import 'package:smart_home/features/register/cubit/signup_cubit.dart';
@@ -53,7 +54,10 @@ RouteFactory onGenerateRoutes() {
     if (settings.name == RouteName.login) {
       return MaterialPageRoute(
         settings: settings,
-        builder: (context) => const LoginScreen(),
+        builder: (context) => BlocProvider(
+          create: (_) => GetIt.I<LoginCubit>(),
+          child: const LoginScreen(),
+        ),
       );
     }
   };

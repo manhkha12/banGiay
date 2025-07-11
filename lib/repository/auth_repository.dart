@@ -8,15 +8,38 @@ class AuthRepository {
 
   AuthRepository(this.authApi, this.appProvider);
 
-  Future<User> login (Map<String, dynamic> params) async {
-    final response = await authApi.login(params);
-    await updateToken(response);
-    return User.fromJson(response['user']);
+  // Future<User> login (Map<String, dynamic> params) async {
+  //   final response = await authApi.login(params);
+  //   await updateToken(response);
+  //   return User.fromJson(response['user']);
+  // }
+
+  // Future<User> register(Map<String, dynamic> params) async {
+  //   print("repository params: $params");
+  //   final response = await authApi.register(params);
+  //   return User.fromJson(response['user']);
+  // }
+
+  Future<User> login(Map<String, dynamic> params) async {
+    try {
+      final response = await authApi.login(params);
+      await updateToken(response);
+      return User.fromJson(response['user']);
+    } catch (e) {
+      print('Login error: $e');
+      rethrow; // Hoặc throw Exception("Login failed") nếu muốn custom message
+    }
   }
 
   Future<User> register(Map<String, dynamic> params) async {
-    final response = await authApi.register(params);
-    return User.fromJson(response['user']);
+    try {
+      print("repository params: $params");
+      final response = await authApi.register(params);
+      return User.fromJson(response);
+    } catch (e) {
+      print('Register error: $e');
+      rethrow; // Hoặc throw Exception("Register failed")
+    }
   }
 
   bool get hasAccessToken => appProvider.hasAccessToken;
@@ -24,8 +47,8 @@ class AuthRepository {
   String? get refreshToken => appProvider.refreshToken;
 
   Future<void> updateToken(Map<String, dynamic> response) async {
-    await appProvider.setAccessToken(response['access_token']);
-    await appProvider.setRefreshToken(response['refresh_token']);
+    await appProvider.setAccessToken(response['accessToken']);
+    await appProvider.setRefreshToken(response['refreshToken']);
   }
 
   Future<User> authToken() async {

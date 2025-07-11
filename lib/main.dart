@@ -88,7 +88,7 @@ class _MyAppState extends State<MyApp> {
           },
           locale: context.appLocale.locale,
           localizationsDelegates: context.localizationDelegates,
-          initialRoute: RouteName.intro,
+          initialRoute: RouteName.splash,
           onGenerateRoute: onGenerateRoutes(),
         ),
       ),
