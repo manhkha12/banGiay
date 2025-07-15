@@ -18,21 +18,21 @@ class ModuleApi {
   //   return resp;
   // }
 
-  // Future<List<dynamic>> getNearbyWiFi() async {
-  //   final resp = await moduleApiHandler.get('/nearby_wifi');
-  //   return resp;
-  // }
+  Future<List<dynamic>> getNearbyWiFi() async {
+    final resp = await moduleApiHandler.get('/nearby_wifi');
+    return resp;
+  }
 
-  // Future<void> connectWifi(String ssid, String password, String ownerId) {
-  //   return moduleApiHandler.get(
-  //     '/connect',
-  //     queryParameters: {
-  //       'ssid': ssid,
-  //       'pass': password,
-  //       'owner': ownerId,
-  //     },
-  //   );
-  // }
+  Future<void> connectWifi(String ssid, String password, String ownerId) {
+    return moduleApiHandler.post(
+      '/connect',
+      queryParameters: {
+        'ssid': ssid,
+        'pass': password,
+        'owner': ownerId,
+      },
+    );
+  }
 
   // Future<List<dynamic>> getModules() async {
   //   final resp = await apiHandler.get(

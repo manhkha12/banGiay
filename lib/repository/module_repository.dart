@@ -9,4 +9,9 @@ class ModuleRespository {
     this.moduleApi,
     this.appProvider,
   );
+
+  Future<List<dynamic>> getNearbyWiFi() async {
+    return await moduleApi.getNearbyWiFi();
+  }
+
 }

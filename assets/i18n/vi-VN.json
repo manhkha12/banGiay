@@ -1,3 +1,18 @@
 {
- 
+ "intro":{
+    "btn_skip":"Bỏ qua",
+    "btn_start":"Bắt đầu",
+    "first":{
+        "title":"Control Your Devices",
+        "description":"Take change of your devices with ease. Simpllify your control experience."
+    },
+    "second":{
+        "title":"Add Smart Service To Your Home",
+        "description":"Elevate your home with smart services. Enjoy the convenience of modern technology."
+    },
+    "third":{
+        "title":"Experience The Ultimate In Home Control",
+        "description":"Simplify your life and transform your home into a smart haven. Experience the future of home control."
+    }
+ }
 }

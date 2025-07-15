@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +13,6 @@ import 'routes.dart';
 import 'shared/theme/color_provider.dart';
 import 'shared/theme/colors.dart';
 import 'shared/theme/styles.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -71,29 +69,29 @@ class _MyAppState extends State<MyApp> {
     //       log('Socket state: $state');
     //     })
     //   ],child:
-      return  ColorThemeProvider(
-        colors: colors,
-        child: ToastificationWrapper(
-          child: MaterialApp(
-            navigatorKey: navigatorKey,
-            debugShowCheckedModeBanner: false,
-            theme: theme.lightTheme,
-            darkTheme: theme.lightTheme,
-            title: 'Smart Home',
-            builder: (context, child) {
-              Intl.defaultLocale = context.appLocale.toStringWithSeparator;
-              return MediaQuery(
-                data: MediaQuery.of(context).copyWith(textScaler: const TextScaler.linear(1)),
-                child: ConnectionWidget(child: child!),
-              );
-            },
-            locale: context.appLocale.locale,
-            localizationsDelegates: context.localizationDelegates,
-            initialRoute: RouteName.splash,
-            onGenerateRoute: onGenerateRoutes(),
-          ),
+    return ColorThemeProvider(
+      colors: colors,
+      child: ToastificationWrapper(
+        child: MaterialApp(
+          navigatorKey: navigatorKey,
+          debugShowCheckedModeBanner: false,
+          theme: theme.lightTheme,
+          darkTheme: theme.lightTheme,
+          title: 'Smart Home',
+          builder: (context, child) {
+            Intl.defaultLocale = context.appLocale.toStringWithSeparator;
+            return MediaQuery(
+              data: MediaQuery.of(context)
+                  .copyWith(textScaler: const TextScaler.linear(1)),
+              child: ConnectionWidget(child: child!),
+            );
+          },
+          locale: context.appLocale.locale,
+          localizationsDelegates: context.localizationDelegates,
+          initialRoute: RouteName.splash,
+          onGenerateRoute: onGenerateRoutes(),
         ),
-      );
-    
+      ),
+    );
   }
 }
