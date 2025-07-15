@@ -27,12 +27,16 @@ RouteFactory onGenerateRoutes() {
       );
     }
     if (settings.name == RouteName.main) {
+      // return MaterialPageRoute(
+      //   settings: settings,
+      //   builder: (context) => BlocProvider(
+      //     create: (_) => GetIt.I<AppCubit>(),
+      //     child: const MainScreen(),
+      //   ),
+      // );
       return MaterialPageRoute(
         settings: settings,
-        builder: (context) => BlocProvider(
-          create: (_) => GetIt.I<AppCubit>(),
-          child: const MainScreen(),
-        ),
+        builder: (context) => const MainScreen(),
       );
     }
     if (settings.name == RouteName.intro) {

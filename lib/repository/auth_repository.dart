@@ -21,25 +21,17 @@ class AuthRepository {
   // }
 
   Future<User> login(Map<String, dynamic> params) async {
-    try {
-      final response = await authApi.login(params);
-      await updateToken(response);
-      return User.fromJson(response['user']);
-    } catch (e) {
-      print('Login error: $e');
-      rethrow; // Hoặc throw Exception("Login failed") nếu muốn custom message
-    }
+    final response = await authApi.login(params);
+    print('AuthRepository: login response: $response');
+   
+    print('AuthRepository: login response: ${response['user']}');
+    await updateToken(response);
+    return User.fromJson(response['user']);
   }
 
   Future<User> register(Map<String, dynamic> params) async {
-    try {
-      print("repository params: $params");
-      final response = await authApi.register(params);
-      return User.fromJson(response);
-    } catch (e) {
-      print('Register error: $e');
-      rethrow; // Hoặc throw Exception("Register failed")
-    }
+    final response = await authApi.register(params);
+    return User.fromJson(response);
   }
 
   bool get hasAccessToken => appProvider.hasAccessToken;
@@ -53,6 +45,9 @@ class AuthRepository {
 
   Future<User> authToken() async {
     final resp = await authApi.authToken(refreshToken!);
+    print('AuthRepository: authToken response: $resp');
+ 
+    print('AuthRepository: authToken response: ${resp['user']}');
     await updateToken(resp);
     return User.fromJson(resp['user']);
   }

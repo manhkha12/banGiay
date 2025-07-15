@@ -21,28 +21,20 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    context.read<AppCubit>().checkAuthState();
     _controller = AnimationController(vsync: this);
     _initApp();
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
   Future<void> _initApp() async {
-    await Future.delayed(const Duration(seconds: 1)); // Splash delay
+    await Future.delayed(const Duration(seconds: 3)); // Splash delay
 
     final prefs = await SharedPreferences.getInstance();
     final isFirstLaunch = prefs.getBool('is_first_launch') ?? true;
 
     if (isFirstLaunch) {
-      // chưa từng mở app
       Navigator.of(context).pushReplacementNamed(RouteName.intro);
     } else {
-      // đã từng mở -> kiểm tra login
+      // ĐÃ đăng nhập trước đó → GỌI checkAuthState()
       context.read<AppCubit>().checkAuthState();
     }
   }

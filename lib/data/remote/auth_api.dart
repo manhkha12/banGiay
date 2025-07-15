@@ -41,16 +41,11 @@ class AuthApi {
   // }
 
   Future<Map<String, dynamic>> login(Map<String, dynamic> params) async {
-    try {
-      final resp = await _apiHandler.post(
-        '/auth/login',
-        body: params,
-      );
-      return resp;
-    } catch (e) {
-      print('Login API error: $e');
-      rethrow; // để tầng gọi phía trên (repository) xử lý tiếp
-    }
+    final resp = await _apiHandler.post(
+      '/auth/login',
+      body: params,
+    );
+    return resp;
   }
 
   Future<Map<String, dynamic>> register(Map<String, dynamic> params) async {

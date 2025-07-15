@@ -5,10 +5,10 @@ part 'user.g.dart';
 @freezed
 class User with _$User {
   factory User({
-    required String? id,
-    required String? email,
-    required String? username,
-    @JsonKey(name: 'full_name') required String? fullName,
+   @JsonKey(name: 'user_id') required String id,
+    required String email,
+  @JsonKey(name: 'username')  required String userName,
+    @JsonKey(name: 'full_name') required String fullName,
     // @JsonKey(name: 'phone_number') String? phoneNumber,
   }) = _User;
 
