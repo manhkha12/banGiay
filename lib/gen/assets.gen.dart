@@ -43,15 +43,39 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home.svg
   SvgGenImage get home => const SvgGenImage('assets/icons/homePage.svg');
 
+  /// File path: assets/icons/wifi.svg
+  SvgGenImage get wifi => const SvgGenImage('assets/icons/wifii.svg');
+
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profilePage.svg');
 
   /// File path: assets/icons/device.svg
   SvgGenImage get device => const SvgGenImage('assets/icons/device.svg');
 
+  /// File path: assets/icons/menu_home.svg
+  SvgGenImage get homeMenuTab =>
+      const SvgGenImage('assets/icons/menu_home.svg');
+
+  /// File path: assets/icons/refresh.svg
+  SvgGenImage get refresh => const SvgGenImage('assets/icons/refresh.svg');
+
+  /// File path: assets/icons/plus.svg
+  SvgGenImage get plus => const SvgGenImage('assets/icons/plussvg.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [boardIcon, iconBack, eyeOn, eyeOff, home, profile, device];
+  List<SvgGenImage> get values => [
+        boardIcon,
+        iconBack,
+        eyeOn,
+        homeMenuTab,
+        eyeOff,
+        wifi,
+        home,
+        profile,
+        device,
+        plus,
+        refresh
+      ];
 }
 
 class $AssetsImagesGen {
@@ -69,6 +93,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/home_service.json
   String get homeService => 'assets/images/home_service.json';
 
+  /// File path: assets/images/hand_wave.json
+  String get handWave => 'assets/images/hand_wave.json';
+
   /// File path: assets/images/user.png
   AssetGenImage get user => const AssetGenImage('assets/images/user.png');
 
@@ -78,7 +105,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<String> get values =>
-      [configurating, smartHome, homeControl, homeService];
+      [configurating, smartHome, homeControl, homeService, handWave];
 
   /// List of all assets as images
   List<AssetGenImage> get images => [user, smartHomeBackground];

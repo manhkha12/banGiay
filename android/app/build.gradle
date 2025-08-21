@@ -59,7 +59,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.katstudio.garden"
+        applicationId "com.smarthome.iot"
         minSdkVersion 23
         targetSdkVersion 34
         versionCode flutterVersionCode.toInteger()

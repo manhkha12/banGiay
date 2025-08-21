@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:smart_home/features/device/add_module/add_module_screen.dart';
+import 'package:smart_home/features/device/module_page/module_page.dart';
 import 'package:smart_home/features/home/home_page.dart';
 import 'package:smart_home/features/setting/profile_page.dart';
 import 'package:smart_home/gen/assets.gen.dart';
@@ -46,11 +48,11 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
         items: [
           BottomNavigationItem(
             icon: Assets.icons.home.path,
-            page:const HomePage(),
+            page: const HomePage(),
           ),
           BottomNavigationItem(
             icon: Assets.icons.device.path,
-            page: const Placeholder(),
+            page: const ModulePage(),
           ),
           BottomNavigationItem(
             icon: Assets.icons.profile.path,

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:smart_home/features/common/splash_screen.dart';
+import 'package:smart_home/features/device/add_module/add_module_screen.dart';
+import 'package:smart_home/features/device/add_module/cubit/add_module_cubit.dart';
+import 'package:smart_home/features/device/module_page/module_cubit/module_cubit.dart';
 import 'package:smart_home/features/intro/intro_screen.dart';
 import 'package:smart_home/features/login/component/login_cubit.dart';
 import 'package:smart_home/features/login/login_screen.dart';
@@ -16,6 +19,7 @@ class RouteName {
   static const String register = '/register';
   static const String login = '/login';
   static const String intro = '/intro';
+  static const String addModule = '/addModule';
 }
 
 RouteFactory onGenerateRoutes() {
@@ -27,16 +31,25 @@ RouteFactory onGenerateRoutes() {
       );
     }
     if (settings.name == RouteName.main) {
-      // return MaterialPageRoute(
-      //   settings: settings,
-      //   builder: (context) => BlocProvider(
-      //     create: (_) => GetIt.I<AppCubit>(),
-      //     child: const MainScreen(),
-      //   ),
-      // );
       return MaterialPageRoute(
         settings: settings,
-        builder: (context) => const MainScreen(),
+        builder: (context) => BlocProvider(
+          create: (_) => GetIt.I<ModuleCubit>(),
+          child: const MainScreen(),
+        ),
+      );
+      // return MaterialPageRoute(
+      //   settings: settings,
+      //   builder: (context) => const MainScreen(),
+      // );
+    }
+    if (settings.name == RouteName.addModule) {
+      return MaterialPageRoute(
+        settings: settings,
+        builder: (context) => BlocProvider(
+          create: (_) => GetIt.I<AddModuleCubit>(),
+          child: const AddModuleScreen(),
+        ),
       );
     }
     if (settings.name == RouteName.intro) {

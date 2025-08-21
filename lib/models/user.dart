@@ -9,6 +9,7 @@ class User with _$User {
     required String email,
   @JsonKey(name: 'username')  required String userName,
     @JsonKey(name: 'full_name') required String fullName,
+    @JsonKey(name: 'home_id') String? houseId,
     // @JsonKey(name: 'phone_number') String? phoneNumber,
   }) = _User;
 
