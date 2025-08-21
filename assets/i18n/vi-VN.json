@@ -1,3 +1,93 @@
 {
- 
+  "main": {
+    "home": "Trang chủ",
+    "setting": "Cài đặt",
+    "logout": "Đăng xuất",
+    "save": "Lưu",
+    "dark_mode": "Chế độ tối",
+    "light_mode": "Chế độ sáng"
+  },
+  "intro": {
+    "btn_skip": "Bỏ qua",
+    "btn_start": "Bắt đầu",
+    "first": {
+      "title": "Control Your Devices",
+      "description": "Take change of your devices with ease. Simpllify your control experience."
+    },
+    "second": {
+      "title": "Add Smart Service To Your Home",
+      "description": "Elevate your home with smart services. Enjoy the convenience of modern technology."
+    },
+    "third": {
+      "title": "Experience The Ultimate In Home Control",
+      "description": "Simplify your life and transform your home into a smart haven. Experience the future of home control."
+    }
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "email": "Tên đăng nhập/Email",
+    "password": "Mật khẩu",
+    "forgot_password": "Quên mật khẩu?",
+    "register": "Đăng ký",
+    "dont_have_account": "Bạn chưa có tài khoản?"
+  },
+  "register": {
+    "title": "Đăng ký",
+    "register_success": "Đăng ký thành công",
+    "email": "Email",
+    "input_email": "Nhập email",
+    "input_password": "Nhập mật khẩu",
+    "password": "Mật khẩu",
+    "name_express": "Tên hiển thị",
+    "input_name": "Nhập tên hiển thị",
+
+    "confirm_rule": {
+      "title": "Bằng việc nhấn “Đăng ký”, bạn đã đọc và Đồng ý với ",
+      "term": "Điều khoản",
+      "and": " và ",
+      "policy": "Chính sách",
+      "check": " của chúng tôi."
+    }
+  },
+  "validate": {
+    "incorrect_email": "Vui lòng nhập đúng email",
+    "incorrect_pass": {
+      "password_character": "Mật khẩu có ít nhất 6 ký tự",
+      "specical_character": "Mật khẩu cần ít nhất 1 ký tự đặc biệt",
+      "uppercase": "Mật khẩu có ít nhất 1 chữ hoa"
+    },
+    "incorrect_username": "Tên hiển thị phải có ít nhất 3 ký tự"
+  },
+  "module": {
+    "history": "Lịch sử",
+    "no_his": "Không có lịch sự hoạt động của thiết bị",
+    "title": "Module",
+    "device": "Thiết bị",
+    "search": "Truy vấn",
+    "history_search": "Truy vấn lịch sử",
+    "select_date": "Chọn ngày",
+    "delete_device": "Xóa thiết bị",
+    "device_share": "Chia sẻ thiết bị",
+    "no_device": "Bạn chưa kết nối thiết bị nào. Vui lòng kết nối với thiết bị để sử dụng.",
+    "upgrade_software": "Cập nhật phần mềm",
+    "turn_notification": "Bật thông báo",
+    "setting_network": "Cài đặt mạng",
+    "change_device_name": "Đổi tên thiết bị",
+    "general_setting": "Cài đặt chung",
+    "restart_device": "Khởi động lại thiết bị",
+    "device_list": "Danh sách thiết bị",
+    "add_device": "Thêm thiết bị",
+    "get_device_info_failed": "Không lấy được thông tin thiết bị",
+    "check_again": "Vui lòng kiểm tra lại các bước trong phần hướng dẫn kết nối",
+    "connect_failed": "Cài đặt WiFi thất bại",
+    "add_device_success": "Đã thêm thiết bị thành công",
+    "status": {
+      "online": "Đang hoạt động",
+      "offline": "Ngoại tuyến",
+      "connecting": "Đang kết nối",
+      "disconnected": "Ngắt kết nối",
+      "connecting_failed": "Kết nối thất bại",
+      "connected": "Đã kết nối"
+    }
+  }
 }

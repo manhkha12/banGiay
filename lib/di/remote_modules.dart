@@ -10,7 +10,6 @@ import 'package:smart_home/data/remote/interceptors/auth_interceptor.dart';
 import 'package:smart_home/data/remote/interceptors/error_interceptor.dart';
 import 'package:smart_home/data/remote/module_api.dart';
 
-
 dynamic _parseAndDecode(String response) {
   return jsonDecode(response);
 }
@@ -42,11 +41,11 @@ Future<void> registerRemoteModules(GetIt getIt) async {
     ..registerLazySingleton(() => AuthInterceptor(getIt()))
     ..registerLazySingleton(() => ErrorInterceptor(getIt()))
     ..registerLazySingleton(() => LogInterceptor(
-          requestBody: false,
-          request: false,
-          requestHeader: false,
-          responseBody: kDebugMode,
-          responseHeader: false,
+          requestBody: true,
+          request: true,
+          requestHeader: true,
+          responseBody: true,
+          responseHeader: true,
         ))
     ..registerLazySingleton(() {
       final _interceptors = <Interceptor>[

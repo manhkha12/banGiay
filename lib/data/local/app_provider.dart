@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-const String _tokenKey = 'kat_garden.access_token';
-const String _refreshTokenKey = 'kat_garden.refresh_token';
+const String _tokenKey = 'smart_home.accessToken';
+const String _refreshTokenKey = 'smart_home.refreshToken';
 
 class AppProvider {
   final SharedPreferences _preferences;
