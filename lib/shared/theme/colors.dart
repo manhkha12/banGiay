@@ -11,8 +11,6 @@ abstract class ColorTheme {
 
   Color white = const Color(0xffFFFFFF);
 
-  Color weatherBackground = const Color(0xFFAEE5F4);
-
   Color blue = const Color(0xff007AFF);
 
   Color textTerrary = const Color(0xff8E8E8E);

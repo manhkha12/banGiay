@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smart_home/models/user.dart';
 import 'package:smart_home/repository/auth_repository.dart';
 
+
 import 'app_state.dart';
 export 'app_state.dart';
 
@@ -16,14 +17,13 @@ class AppCubit extends Cubit<AppState> {
 
   Future<void> checkAuthState() async {
     try {
-      
       if (!authRepository.hasAccessToken) {
         await Future.delayed(const Duration(seconds: splashDuration));
         unauthorized();
         return;
       }
       final res = await Future.wait([
-        authRepository.authToken(),
+        // authRepository.authToken(),
         Future.delayed(const Duration(seconds: splashDuration))
       ]);
       for (var e in res) {
@@ -40,12 +40,10 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void authorized(User user) {
-    print('✅ Authorized: ${user.email}');
     emit(AppState.authorized(user: user));
   }
 
   void unauthorized() {
-     print('❌ Unauthorized');
     emit(AppState.unAuthorized());
   }
 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:lottie/lottie.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smart_home/gen/assets.gen.dart';
 import 'package:smart_home/shared/cubits/app_cubit/app_cubit.dart';
 
@@ -21,22 +20,14 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
+    context.read<AppCubit>().checkAuthState();
     _controller = AnimationController(vsync: this);
-    _initApp();
   }
 
-  Future<void> _initApp() async {
-    await Future.delayed(const Duration(seconds: 3)); // Splash delay
-
-    final prefs = await SharedPreferences.getInstance();
-    final isFirstLaunch = prefs.getBool('is_first_launch') ?? true;
-
-    if (isFirstLaunch) {
-      Navigator.of(context).pushReplacementNamed(RouteName.intro);
-    } else {
-      // ĐÃ đăng nhập trước đó → GỌI checkAuthState()
-      context.read<AppCubit>().checkAuthState();
-    }
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
