@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
-import 'package:smart_home/app_config.dart';
-import 'package:smart_home/data/remote/auth_api.dart';
-import 'package:smart_home/data/remote/handler/api_handler.dart';
-import 'package:smart_home/data/remote/interceptors/auth_interceptor.dart';
-import 'package:smart_home/data/remote/interceptors/error_interceptor.dart';
-import 'package:smart_home/data/remote/module_api.dart';
+import 'package:shoe_store/app_config.dart';
+import 'package:shoe_store/data/remote/auth_api.dart';
+import 'package:shoe_store/data/remote/handler/api_handler.dart';
+import 'package:shoe_store/data/remote/interceptors/auth_interceptor.dart';
+import 'package:shoe_store/data/remote/interceptors/error_interceptor.dart';
+import 'package:shoe_store/data/remote/module_api.dart';
 
 
 dynamic _parseAndDecode(String response) {

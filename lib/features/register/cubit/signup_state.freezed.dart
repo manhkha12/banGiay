@@ -16,13 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$SignupState {
-  String? get username => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get password => throw _privateConstructorUsedError;
-  String? get fullName => throw _privateConstructorUsedError;
-  String? get confirmPassword => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
+  String? get rePass => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isSignupSuccess => throw _privateConstructorUsedError;
+  AppError? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
@@ -38,13 +38,15 @@ abstract class $SignupStateCopyWith<$Res> {
       _$SignupStateCopyWithImpl<$Res, SignupState>;
   @useResult
   $Res call(
-      {String? username,
-      String? email,
+      {String? email,
       String? password,
-      String? fullName,
-      String? confirmPassword,
+      String? userName,
+      String? rePass,
       bool isLoading,
-      bool isSignupSuccess});
+      bool isSignupSuccess,
+      AppError? error});
+
+  $AppErrorCopyWith<$Res>? get error;
 }
 
 /// @nodoc
@@ -62,19 +64,15 @@ class _$SignupStateCopyWithImpl<$Res, $Val extends SignupState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
     Object? email = freezed,
     Object? password = freezed,
-    Object? fullName = freezed,
-    Object? confirmPassword = freezed,
+    Object? userName = freezed,
+    Object? rePass = freezed,
     Object? isLoading = null,
     Object? isSignupSuccess = null,
+    Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -83,13 +81,13 @@ class _$SignupStateCopyWithImpl<$Res, $Val extends SignupState>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
+      userName: freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
-      confirmPassword: freezed == confirmPassword
-          ? _value.confirmPassword
-          : confirmPassword // ignore: cast_nullable_to_non_nullable
+      rePass: freezed == rePass
+          ? _value.rePass
+          : rePass // ignore: cast_nullable_to_non_nullable
               as String?,
       isLoading: null == isLoading
           ? _value.isLoading
@@ -99,7 +97,25 @@ class _$SignupStateCopyWithImpl<$Res, $Val extends SignupState>
           ? _value.isSignupSuccess
           : isSignupSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as AppError?,
     ) as $Val);
+  }
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppErrorCopyWith<$Res>? get error {
+    if (_value.error == null) {
+      return null;
+    }
+
+    return $AppErrorCopyWith<$Res>(_value.error!, (value) {
+      return _then(_value.copyWith(error: value) as $Val);
+    });
   }
 }
 
@@ -112,13 +128,16 @@ abstract class _$$SignupStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? username,
-      String? email,
+      {String? email,
       String? password,
-      String? fullName,
-      String? confirmPassword,
+      String? userName,
+      String? rePass,
       bool isLoading,
-      bool isSignupSuccess});
+      bool isSignupSuccess,
+      AppError? error});
+
+  @override
+  $AppErrorCopyWith<$Res>? get error;
 }
 
 /// @nodoc
@@ -134,19 +153,15 @@ class __$$SignupStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
     Object? email = freezed,
     Object? password = freezed,
-    Object? fullName = freezed,
-    Object? confirmPassword = freezed,
+    Object? userName = freezed,
+    Object? rePass = freezed,
     Object? isLoading = null,
     Object? isSignupSuccess = null,
+    Object? error = freezed,
   }) {
     return _then(_$SignupStateImpl(
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -155,13 +170,13 @@ class __$$SignupStateImplCopyWithImpl<$Res>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
+      userName: freezed == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
-      confirmPassword: freezed == confirmPassword
-          ? _value.confirmPassword
-          : confirmPassword // ignore: cast_nullable_to_non_nullable
+      rePass: freezed == rePass
+          ? _value.rePass
+          : rePass // ignore: cast_nullable_to_non_nullable
               as String?,
       isLoading: null == isLoading
           ? _value.isLoading
@@ -171,6 +186,10 @@ class __$$SignupStateImplCopyWithImpl<$Res>
           ? _value.isSignupSuccess
           : isSignupSuccess // ignore: cast_nullable_to_non_nullable
               as bool,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as AppError?,
     ));
   }
 }
@@ -179,35 +198,39 @@ class __$$SignupStateImplCopyWithImpl<$Res>
 
 class _$SignupStateImpl extends _SignupState {
   _$SignupStateImpl(
-      {this.username,
-      this.email,
-      this.password,
-      this.fullName,
-      this.confirmPassword,
+      {this.email = '',
+      this.password = '',
+      this.userName = '',
+      this.rePass = '',
       this.isLoading = false,
-      this.isSignupSuccess = false})
+      this.isSignupSuccess = false,
+      this.error})
       : super._();
 
   @override
-  final String? username;
-  @override
+  @JsonKey()
   final String? email;
   @override
+  @JsonKey()
   final String? password;
   @override
-  final String? fullName;
+  @JsonKey()
+  final String? userName;
   @override
-  final String? confirmPassword;
+  @JsonKey()
+  final String? rePass;
   @override
   @JsonKey()
   final bool isLoading;
   @override
   @JsonKey()
   final bool isSignupSuccess;
+  @override
+  final AppError? error;
 
   @override
   String toString() {
-    return 'SignupState(username: $username, email: $email, password: $password, fullName: $fullName, confirmPassword: $confirmPassword, isLoading: $isLoading, isSignupSuccess: $isSignupSuccess)';
+    return 'SignupState(email: $email, password: $password, userName: $userName, rePass: $rePass, isLoading: $isLoading, isSignupSuccess: $isSignupSuccess, error: $error)';
   }
 
   @override
@@ -215,24 +238,22 @@ class _$SignupStateImpl extends _SignupState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SignupStateImpl &&
-            (identical(other.username, username) ||
-                other.username == username) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
                 other.password == password) &&
-            (identical(other.fullName, fullName) ||
-                other.fullName == fullName) &&
-            (identical(other.confirmPassword, confirmPassword) ||
-                other.confirmPassword == confirmPassword) &&
+            (identical(other.userName, userName) ||
+                other.userName == userName) &&
+            (identical(other.rePass, rePass) || other.rePass == rePass) &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
             (identical(other.isSignupSuccess, isSignupSuccess) ||
-                other.isSignupSuccess == isSignupSuccess));
+                other.isSignupSuccess == isSignupSuccess) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, username, email, password,
-      fullName, confirmPassword, isLoading, isSignupSuccess);
+  int get hashCode => Object.hash(runtimeType, email, password, userName,
+      rePass, isLoading, isSignupSuccess, error);
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
@@ -245,29 +266,29 @@ class _$SignupStateImpl extends _SignupState {
 
 abstract class _SignupState extends SignupState {
   factory _SignupState(
-      {final String? username,
-      final String? email,
+      {final String? email,
       final String? password,
-      final String? fullName,
-      final String? confirmPassword,
+      final String? userName,
+      final String? rePass,
       final bool isLoading,
-      final bool isSignupSuccess}) = _$SignupStateImpl;
+      final bool isSignupSuccess,
+      final AppError? error}) = _$SignupStateImpl;
   _SignupState._() : super._();
 
-  @override
-  String? get username;
   @override
   String? get email;
   @override
   String? get password;
   @override
-  String? get fullName;
+  String? get userName;
   @override
-  String? get confirmPassword;
+  String? get rePass;
   @override
   bool get isLoading;
   @override
   bool get isSignupSuccess;
+  @override
+  AppError? get error;
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.

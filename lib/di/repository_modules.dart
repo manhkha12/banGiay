@@ -1,7 +1,8 @@
 import 'package:get_it/get_it.dart';
-import 'package:smart_home/repository/auth_repository.dart';
-import 'package:smart_home/repository/module_repository.dart';
-import 'package:smart_home/repository/user_repository.dart';
+import 'package:shoe_store/repository/auth_repository.dart';
+import 'package:shoe_store/repository/module_repository.dart';
+import 'package:shoe_store/repository/user_repository.dart';
+
 
 Future<void> registerRepositoryModules(GetIt getIt) async {
   getIt

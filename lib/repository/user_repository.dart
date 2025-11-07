@@ -1,5 +1,7 @@
-import 'package:smart_home/app_config.dart';
-import 'package:smart_home/data/local/app_provider.dart';
+
+
+import 'package:shoe_store/app_config.dart';
+import 'package:shoe_store/data/local/app_provider.dart';
 
 class UserRepository {
   final AppProvider appProvider;

@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
-import 'package:smart_home/di/di.dart' as di;
-import 'package:smart_home/features/localization/app_localization.dart';
-import 'package:smart_home/features/localization/localization_controller.dart';
-import 'package:smart_home/features/localization/translate_extension.dart';
-import 'package:smart_home/shared/widgets/connection_widget.dart';
+import 'package:shoe_store/di/di.dart' as di;
+import 'package:shoe_store/features/localization/app_localization.dart';
+import 'package:shoe_store/features/localization/localization_controller.dart';
+import 'package:shoe_store/features/localization/translate_extension.dart';
+import 'package:shoe_store/shared/widgets/connection_widget.dart';
+
 
 import 'package:toastification/toastification.dart';
 import 'routes.dart';
@@ -79,7 +80,7 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             theme: theme.lightTheme,
             darkTheme: theme.lightTheme,
-            title: 'Smart Home',
+            title: 'Shoe Store',
             builder: (context, child) {
               Intl.defaultLocale = context.appLocale.toStringWithSeparator;
               return MediaQuery(

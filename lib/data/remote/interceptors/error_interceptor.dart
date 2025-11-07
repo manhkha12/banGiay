@@ -3,9 +3,10 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_home/data/local/app_provider.dart';
-import 'package:smart_home/data/remote/exceptions/app_exception_state.dart';
-import 'package:smart_home/data/remote/exceptions/exceptions.dart';
+import 'package:shoe_store/data/local/app_provider.dart';
+import 'package:shoe_store/data/remote/exceptions/app_exception_state.dart';
+import 'package:shoe_store/data/remote/exceptions/exceptions.dart';
+
 
 
 class ErrorInterceptor extends Interceptor {

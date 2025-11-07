@@ -1,6 +1,6 @@
 
 
-import 'package:smart_home/features/localization/localizations.dart';
+import 'package:shoe_store/features/localization/translate_extension.dart';
 
 class Validation {
   Validation();
@@ -10,7 +10,7 @@ class Validation {
       return null;
     }
     if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
-      return 'validate.incorrect_email'.tr();
+      return 'login.validate.incorrect_email'.tr();
     }
 
     return null;
@@ -21,14 +21,7 @@ class Validation {
       return null;
     }
     if (value.isNotEmpty && value.length < 6) {
-      return 'validate.incorrect_pass.password_character'.tr();
-    }
-    if (!RegExp(r'[A-Z]').hasMatch(value)) {
-      return 'validate.incorrect_pass.uppercase'.tr();
-    }
-
-    if (!RegExp(r'[!@#\$%^&*(),.?":{}|<>]').hasMatch(value)) {
-      return 'validate.incorrect_pass.specical_character'.tr();
+      return 'login.validate.incorrect_pass'.tr();
     }
 
     return null;
@@ -39,7 +32,16 @@ class Validation {
       return null;
     }
     if (value.isNotEmpty && value.length < 3) {
-      return 'validate.incorrect_username'.tr();
+      return 'login.validate.incorrect_userName'.tr();
+    }
+    return null;
+  }
+  static String? validateRePass(String? value,String? originalPass){
+    if(value== null || value.isEmpty){
+      return null;
+    }
+    if(value.isNotEmpty&& value!= originalPass){
+      return 'login.validate.pass_doesnt_match'.tr();
     }
     return null;
   }

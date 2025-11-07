@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/gen/assets.gen.dart';
-import 'package:smart_home/shared/extensions/color_extension.dart';
+import 'package:shoe_store/gen/assets.gen.dart';
+import 'package:shoe_store/shared/extensions/color_extension.dart';
+
 
 
 import 'app_text.dart';

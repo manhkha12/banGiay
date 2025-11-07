@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:smart_home/shared/extensions/color_extension.dart';
+import 'package:shoe_store/shared/extensions/color_extension.dart';
+
 
 
 import 'bottom_navigation_controller.dart';

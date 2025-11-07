@@ -1,3 +1,105 @@
 {
- 
+  "welcome": "Xin chào",
+  "spend_category": {
+    "classify":" Phân loại",
+    "education": "Giáo dục",
+    "shopping": "Tiêu dùng",
+    "entertainment": "Giải trí",
+    "healthy": "Sức khoẻ",
+    "vehicle": "Xe cộ",
+    "services": "Dịch vụ",
+    "investment": "Đầu tư",
+    "salary": "Lương",
+    "saving": "Tiết kiệm",
+    "business": "Kinh doanh",
+    "travel": "Du lịch",
+    "other": "Khác"
+  },
+  "common": {
+    "skip": "Bỏ qua"
+  },
+  "signup": {
+    "title": "Đăng ký",
+    "signup_note":"Để tạo tài khoản hãy đăng ký tài khoản dưới đây",
+    "email": "Email",
+    "name_express": "Tên hiển thị",
+    "input_name_express": "Nhập tên hiển thị",
+    "password": "Mật khẩu",
+    "re_input_pass": "Nhập lại mật khẩu",
+    "you_have_an_account": "Bạn đã có tài khoản?",
+    "wrong_pass": "Mật khẩu không khớp"
+  },
+  "login": {
+    "input_email": "Nhập email",
+    "input_password": "Nhập mật khẩu",
+    "fogot_pass": "Quên mật khẩu?",
+    "title": "Đăng nhập",
+    "or": "hoặc",
+    "login_note": "Hãy điền thông tin tài khoản dưới đây để đăng nhập",
+    "login_by_apple": "Đăng nhập bằng Apple",
+    "new_member": "Bạn chưa có tài khoản?",
+    "validate": {
+      "incorrect_email": "Vui lòng nhập đúng email",
+      "incorrect_pass": "Mật khẩu có ít nhất 6 ký tự",
+      "incorrect_userName":"Tên hiển thị phải có ít nhất 3 ký tự",
+      "pass_doesnt_match":"Mật khẩu không khớp"
+    }
+  },
+  "intro": {
+    "btn_skip": "Bỏ qua",
+    "btn_start": "Bắt đầu",
+    
+    
+    
+    "intro_4": {
+      "title": "Shoe Shop",
+      "description": "Chào mừng đến với thế giới giày"
+    }
+  },
+  "home": {
+    "home_appbar":"Trang Chủ",
+    "type_shoe":"Kiểu giày bạn muốn mua hôm nay?",
+    "populor":"Thịnh hành",
+    "search":"Tìm kiếm",
+    "view_all":"Xem tất cả",
+    "today_food": "Món ngon hôm nay",
+    "note": "Ghi chú",
+    "btn_see_more": "Xem thêm",
+    "btn_create_note": "Tạo ghi chú",
+    "greeting": {
+      "morning": "Chào buổi sáng!",
+      "afternoon": "Chào buổi chiều!",
+      "evening": "Chào buổi tối!"
+    },
+    "wallet_see_more":{
+      "date_of_birth":"Ngày phát sinh",
+      "cancel":"Hủy",
+      "save":"Lưu lại"
+    }
+    
+
+  },
+  "menu":{
+    "persional":"Cá nhân",
+    "edit_info":"Chỉnh sửa thông tin",
+    "list_friends":"Danh sách bạn bè",
+    "food_saved":"Món ăn đã lưu",
+    "wallet_setting":"Cài đặt ví",
+    "recommend_food_setting":"Cài đặt gợi ý món ăn",
+    "rating_app":"Đánh giá ứng dụng",
+    "share_app":"Chia sẻ ứng dụng"
+  },
+  "settings":{
+    "title":"Cài đặt",
+    "account":"Tài khoản",
+    "profile":"Hồ sơ cá nhân",
+    "pass_and_security":"Mật khẩu và bảo mật",
+    "language":"Ngôn ngữ",
+    "theme":"Chủ đề",
+    "notification":"Cai dat thông báo",
+    "dark_mode":"Chế độ tối",
+    "light_mode":"Chế độ sáng",
+    "logout":"Đăng xuất"
+  }
+
 }

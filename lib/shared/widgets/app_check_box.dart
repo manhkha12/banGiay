@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/shared/extensions/build_context_extension.dart';
-import 'package:smart_home/shared/widgets/app_text.dart';
+import 'package:shoe_store/shared/extensions/extensions.dart';
+import 'package:shoe_store/shared/widgets/app_text.dart';
+
 
 
 class AppCheckbox extends StatelessWidget {

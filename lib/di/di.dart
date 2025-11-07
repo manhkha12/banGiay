@@ -1,7 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:smart_home/app_config.dart';
-import 'package:smart_home/shared/cubits/app_cubit/app_cubit.dart';
+import 'package:shoe_store/app_config.dart';
+import 'package:shoe_store/shared/cubits/app_cubit/app_cubit.dart';
+
 
 
 import 'cubit_modules.dart';

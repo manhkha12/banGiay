@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/gen/fonts.gen.dart';
-import 'package:smart_home/shared/extensions/build_context_extension.dart';
+import 'package:shoe_store/gen/fonts.gen.dart';
+import 'package:shoe_store/shared/extensions/extensions.dart';
+
 
 
 class AppText extends StatelessWidget {

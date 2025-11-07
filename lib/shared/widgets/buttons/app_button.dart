@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/shared/theme/styles.dart';
-import 'package:smart_home/shared/widgets/app_text.dart';
+import 'package:shoe_store/shared/theme/styles.dart';
+import 'package:shoe_store/shared/widgets/app_text.dart';
+
 
 
 

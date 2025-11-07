@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:smart_home/features/localization/app_localization.dart';
-import 'package:smart_home/features/localization/constants.dart';
-import 'package:smart_home/features/localization/localization_controller.dart';
-import 'package:smart_home/features/localization/localization_utils.dart';
+import 'package:shoe_store/features/localization/app_localization.dart';
+import 'package:shoe_store/features/localization/constants.dart';
+import 'package:shoe_store/features/localization/localization_controller.dart';
+import 'package:shoe_store/features/localization/localization_utils.dart';
+
 
 
 

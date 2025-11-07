@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:smart_home/shared/extensions/build_context_extension.dart';
-import 'package:smart_home/shared/extensions/color_extension.dart';
-import 'package:smart_home/shared/theme/styles.dart';
-import 'package:smart_home/shared/widgets/app_text.dart';
+import 'package:shoe_store/shared/extensions/extensions.dart';
+import 'package:shoe_store/shared/theme/styles.dart';
+import 'package:shoe_store/shared/widgets/app_text.dart';
+
 
 import 'base_button.dart';
 

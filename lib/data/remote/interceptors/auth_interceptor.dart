@@ -1,7 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:smart_home/data/local/app_provider.dart';
+import 'package:shoe_store/data/local/app_provider.dart';
+
 
 
 class AuthInterceptor extends Interceptor {

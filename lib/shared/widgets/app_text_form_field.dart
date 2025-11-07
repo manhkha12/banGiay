@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:smart_home/gen/fonts.gen.dart';
-import 'package:smart_home/shared/extensions/build_context_extension.dart';
-import 'package:smart_home/shared/theme/styles.dart';
+import 'package:shoe_store/gen/fonts.gen.dart';
+import 'package:shoe_store/shared/extensions/extensions.dart';
+import 'package:shoe_store/shared/theme/styles.dart';
+
 
 
 import 'app_text.dart';

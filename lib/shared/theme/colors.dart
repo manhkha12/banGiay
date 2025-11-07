@@ -7,25 +7,21 @@ abstract class ColorTheme {
 
   Color textSecondary = const Color(0xff5B5B5B);
 
-  Color black = const Color(0xff000000);
-
-  Color white = const Color(0xffFFFFFF);
-
-  Color blue = const Color(0xff007AFF);
-
-  Color textTerrary = const Color(0xff8E8E8E);
-
-  Color textDisabled = const Color(0xff8D8D8D);
+  Color textTerrary = const Color(0xff505050);
 
   MaterialColor get swatches;
 
   Color get primaryButton;
 
+  Color shoebackground = const Color(0xFFF2F0F0);
+
   Color textError = const Color(0xffEB5252);
+
+  Color modelPurple = const Color(0xFF2608AB);
 
   Color inputBorder = const Color(0xffA6A6A6);
 
-  Color get focusedInputBorder;
+  Color focusedInputBorder = const Color(0xffFBB700);
 
   Color erroredInputBorder = const Color(0xffF64D4D);
 
@@ -35,7 +31,7 @@ abstract class ColorTheme {
 
   Color disabledInputBorder = const Color(0xffE0E0E0);
 
-  Color get cursor;
+  Color cursor = const Color(0xffFBB700);
 
   Color disableIcon = const Color(0xff8D8D8D);
 
@@ -65,9 +61,9 @@ abstract class ColorTheme {
 
   Color lightBorder = const Color(0xffEEEEEE);
 
-  Color primaryBackground = const Color(0xffF6F8FC);
+  Color primaryBackground = const Color(0xffFEFEFE);
 
-  Color get activeSlider;
+  Color activeSlider = const Color(0xffFBB700);
 
   Color inactiveSlider = const Color(0xffECECEC);
 
@@ -75,88 +71,51 @@ abstract class ColorTheme {
 
   Color lightPink = const Color(0xffFFE5F2);
 
+  Color black = const Color(0xF0000000);
+Color white = Color.fromARGB(239, 251, 251, 251);
   Color dimGrey = const Color(0xffD9D9D9).withOpacity(0.2);
-
-  Color get highlightTab;
-
-  Color unHighlightTab = const Color(0xff8D8D8D);
-
-  Color success = const Color(0xff00875A);
-
-  Color error = const Color(0xffEB5252);
-
-  Color warning = const Color(0xffFFBC11);
-
-  Color good = Colors.green;
 }
 
 class LightColorTheme extends ColorTheme {
   @override
-  Color get primaryColor => const Color(0xff4ba269);
+  Color get primaryColor => const Color(0xffFBB700);
 
   @override
-  Color get primaryButton => const Color(0xff4ba269);
+  Color get primaryButton => const Color(0xffFBB700);
 
   @override
-  MaterialColor get swatches => const MaterialColor(0xff4ba269, {
-        50: Color(0xffe8f5ed),
-        100: Color(0xffc9e7d3),
-        200: Color(0xffa7d7b8),
-        300: Color(0xff85c99c),
-        400: Color(0xff6bbd88),
-        500: Color(0xff53b174),
-        600: Color(0xff4ba269),
-        700: Color(0xff42905d),
-        800: Color(0xff3c7e52),
-        900: Color(0xff305e3f),
+  MaterialColor get swatches => const MaterialColor(0xffFBB700, {
+        50: Color(0xffFFF7DD),
+        100: Color(0xffFFE9AA),
+        200: Color(0xffFEDB71),
+        300: Color(0xffFCCE33),
+        400: Color(0xffFCC200),
+        500: Color(0xffFBB700),
+        600: Color(0xffFBA900),
+        700: Color(0xffFC9500),
+        800: Color(0xffFD8300),
+        900: Color(0xffFE6000),
       });
-
-  @override
-  Color get activeSlider => const Color(0xff4ba269);
-
-  @override
-  Color get cursor => const Color(0xff4ba269);
-
-  @override
-  Color get focusedInputBorder => const Color(0xff4ba269);
-
-  @override
-  Color get highlightTab => const Color(0xff4ba269);
 }
 
 class DarkColorTheme extends ColorTheme {
   @override
-  Color get primaryColor => const Color(0xffFFFFFF);
+  Color get primaryColor => const Color(0xffFBB700);
 
   @override
-  Color get primaryButton => const Color(0xff4ba269);
+  Color get primaryButton => const Color(0xffFBB700);
 
   @override
-  Color get primaryBackground => const Color(0xff212121);
-
-  @override
-  MaterialColor get swatches => const MaterialColor(0xff212121, {
-        50: Color(0xffFAFAFA),
-        100: Color(0xffF5F5F5),
-        200: Color(0xffEEEEEE),
-        300: Color(0xffE0E0E0),
-        400: Color(0xffBDBDBD),
-        500: Color(0xff9E9E9E),
-        600: Color(0xff757575),
-        700: Color(0xff616161),
-        800: Color(0xff424242),
-        900: Color(0xff212121),
+  MaterialColor get swatches => const MaterialColor(0xffFBB700, {
+        50: Color(0xffFFF7DD),
+        100: Color(0xffFFE9AA),
+        200: Color(0xffFEDB71),
+        300: Color(0xffFCCE33),
+        400: Color(0xffFCC200),
+        500: Color(0xffFBB700),
+        600: Color(0xffFBA900),
+        700: Color(0xffFC9500),
+        800: Color(0xffFD8300),
+        900: Color(0xffFE6000),
       });
-
-  @override
-  Color get activeSlider => const Color(0xff4ba269);
-
-  @override
-  Color get cursor => const Color(0xff4ba269);
-
-  @override
-  Color get focusedInputBorder => const Color(0xff4ba269);
-
-  @override
-  Color get highlightTab => const Color(0xff4ba269);
 }
